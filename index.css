@@ -36,14 +36,17 @@ h2{
     background-color: rgb(17, 16, 16);
 }
 #contact-form > div > input{
+    text-align: center;
     margin-bottom: 5%;
     outline: none;
     border: none;
     font-size: 100%;
     background-color: rgb(17, 16, 16);
+    color: white;
 
 }
 #submit{
+    background-color: white;
     font-size: 200%;
     padding: 3%;
     margin-left: 15%;
