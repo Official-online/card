@@ -29,7 +29,7 @@ input{
     background-color: white;
     color: black;
     width: 100%;
-    font-size: 350%;
+    font-size: 250%;
     padding: 5%;
     margin-bottom: 10%;
     outline: none;
@@ -43,8 +43,8 @@ label{
 }
 #div2{
     display: grid;
-    grid-template-columns: 45% 45%;
-    column-gap: 10%
+    grid-template-columns: 40% 40%;
+    column-gap: 20%
 }
 #div2 > label{
     margin-top: -5%;
@@ -52,20 +52,21 @@ label{
 }
 #div3{
     display: grid;
-    grid-template-columns: 45% 45%;
-    column-gap: 10%
+    grid-template-columns: 42.5% 42.5%;
+    column-gap: 15%
 }
 #div3 > input{
-    /* font-size: 300%; */
+    font-size: 300%;
     padding: 10%;
     color: black;
 }
 
 #submit{
     background-color: green;
-    color: #aaa;
-    margin-top: 35%;
+    color: white;
+    margin-top: 5%;
     position: relative;
+    padding: 5%;
     /* animation-name: done; */
     animation-duration: 3s;
     animation-iteration-count: 1;
