@@ -26,7 +26,7 @@ h2, #p1{
     margin-bottom: -5%;
 }
 #form, #div4{
-    color: #aaa;
+    color: rgb(102, 139, 148);
     width:100%;
     /* margin: 5%; */
     padding: 5%;
@@ -46,6 +46,7 @@ input{
     border-radius: 15px;
 }
 label{
+    color: black;
     font-size: 300%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         /* margin-top: 15%; */
